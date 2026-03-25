@@ -1,0 +1,12 @@
+function pay(){
+    const name = document.getElementById('name').value;
+    const money = document.getElementById('money').value;
+
+    if(name === "" || money === ""){
+        document.getElementById('result').innerText = "Vui lòng nhập đủ thông tin!";
+    } else {
+        document.getElementById('result').innerText =
+            "Khách hàng " + name + " đã thanh toán số tiền " + money + " VND thành công.";
+    }
+}
+

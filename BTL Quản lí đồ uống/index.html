@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Quản lý-Trang Chủ</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sidebar">
+    <h2>Quản lý</h2>
+    <a href="index.html">Trang chủ </a>
+    <a href="nhap-hang.html">Nhập hàng</a>
+    <a href="kho-html.html">Kho</a>
+    <a href="thong-ke.html">Thống kê đồ uống</a>
+</div>
+<div class="content">
+<div class="main">
+    <div class="top-bar">
+    <div class="cart-icon" onclick="toggleCart()">
+        🛒 <span id="count">0</span>
+    </div>
+</div>
+    
+    <h1>Trang chủ</h1>
+    <p>Chào mừng bạn đến hệ thống quản lý đồ uống</p>
+
+    <!-- DANH SÁCH SẢN PHẨM -->
+<div class="category">
+    <button onclick="filterProduct('coffee')">Coffee</button>
+    <button onclick="filterProduct('trasua')">Trà sữa</button>
+    <button onclick="filterProduct('tra')">Trà hoa quả</button>
+    <button onclick="filterProduct('sinhto')">Sinh tố</button>
+    <button onclick="filterProduct('soda')">Soda</button>
+</div>
+    <div class="dashboard" id="product-list"></div>
+    <script src="sanpham.js"></script>
+
+</div>
+</div>
+<script src="thanh toán.js"></script>
+</div>
+<div class="cart" id="cart">
+    <h3>Giỏ hàng</h3>
+    <div id="cart-items"></div>
+</div>
+</body>
+</html>

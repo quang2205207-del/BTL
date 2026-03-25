@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Nhập hàng</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+}
+
+/* ===== LAYOUT ===== */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* ===== BÊN TRÁI ===== */
+.left {
+    width: 50%;
+    padding: 15px;
+    overflow-y: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+/* tiêu đề */
+.left h2 {
+    grid-column: span 2;
+    text-align: center;
+    margin: 0 0 10px;
+}
+
+/* sản phẩm */
+.product {
+    background: #fff;
+    border-radius: 12px;
+    padding: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.product:hover {
+    transform: scale(1.03);
+}
+
+.product img {
+    width: 100%;
+    height: 120px;
+    object-fit: contain; /* HIỂN THỊ FULL ẢNH */
+    background: #fff;
+}
+
+/* tên */
+.product p {
+    margin: 6px 0 3px;
+    font-size: 14px;
+}
+
+/* giá */
+.product span {
+    color: red;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+
+/* ===== BÊN PHẢI ===== */
+.right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== FORM ===== */
+.form {
+    background: #fff;
+    padding: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+.form h2 {
+    margin-top: 0;
+}
+
+.form label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.form button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    background: orange;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ===== GIỎ HÀNG ===== */
+.bottom {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.bottom h3 {
+    margin-top: 0;
+}
+
+.item {
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ===== BÊN TRÁI ===== -->
+    <div class="left">
+        <h2>Sản phẩm</h2>
+
+        <div class="product">
+            <img src="https://cdn.tgdd.vn/2021/11/CookRecipe/CookTipsNote/hong-tra-la-gi-8-cong-dung-cua-hong-tra-voi-suc-khoe-tipsnote-800x474.jpg">
+            <p>Hồng Trà</p>
+            <span>100.000đ</span>
+        </div>
+
+        <div class="product">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.GOuhugjXcpse1JZSpxtNQwHaHa">
+            <p>Trân Châu</p>
+            <span>79.000đ</span>
+        </div>
+
+        <div class="product">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.VVlknbzJ5jZ6Fefs1jWHzAHaHa">
+            <p>Cốc Nhựa</p>
+            <span>6.000đ</span>
+        </div>
+
+        <div class="product">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.0fyW1PIR8oytiF2ybaQlaQHaHa">
+            <p>Ống hút</p>
+            <span>10.000đ</span>
+        </div>
+        <div class="product">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.0fyW1PIR8oytiF2ybaQlaQHaHa">
+            <p>Ống hút</p>
+            <span>10.000đ</span>
+        </div>
+        <div class="product">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.0fyW1PIR8oytiF2ybaQlaQHaHa">
+            <p>Ống hút</p>
+            <span>10.000đ</span>
+        </div>
+        <div class="product">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.0fyW1PIR8oytiF2ybaQlaQHaHa">
+            <p>Ống hút</p>
+            <span>10.000đ</span>
+        </div>
+        <div class="product">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.0fyW1PIR8oytiF2ybaQlaQHaHa">
+            <p>Ống hút</p>
+            <span>10.000đ</span>
+        </div>
+        <div class="product">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.0fyW1PIR8oytiF2ybaQlaQHaHa">
+            <p>Ống hút</p>
+            <span>10.000đ</span>
+        </div>
+        <div class="product">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.0fyW1PIR8oytiF2ybaQlaQHaHa">
+            <p>Ống hút</p>
+            <span>10.000đ</span>
+        </div>
+
+    </div>
+
+    <!-- ===== BÊN PHẢI ===== -->
+    <div class="right">
+
+        <!-- FORM -->
+        <div class="form">
+            <h2>Nhập hàng</h2>
+
+            <label>Tên sản phẩm</label>
+            <input type="text">
+
+            <label>Số lượng</label>
+            <input type="number">
+
+            <label>Giá nhập</label>
+            <input type="number">
+
+            <button>Thêm vào danh sách</button>
+        </div>
+
+        <!-- GIỎ HÀNG -->
+        <div class="bottom">
+            <h3>Danh sách đã nhập</h3>
+            <div class="item">Hồng Trà - 10 túi - 1.000.000đ</div> 
+            <div class="item">Cốc Nhựa - 100 cái - 600.000đ</div> 
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

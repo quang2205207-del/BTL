@@ -1,0 +1,218 @@
+h2{
+    margin:0;
+    padding:10px 0;
+    color:#ffffff;
+    font-size:32px;
+}
+
+/*LAYOUT*/
+body{
+    margin:0;
+    font-family:Arial;
+    display:flex;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar{
+    width:220px;
+    height:130vh;
+    background-image: url(https://demoda.vn/wp-content/uploads/2022/01/anh-vu-tru-doc-dao.jpg);
+    color:white;
+    background-size: cover;
+    background-position: left;
+
+    padding-top:20px;
+}
+
+.sidebar h2{
+    text-align:center;
+}
+
+.sidebar a{
+    display:block;
+    padding:15px 20px;
+    color:white;
+    text-decoration:none;
+}
+
+.sidebar a:hover{
+    background:#3498db;
+}
+
+/*CONTENT */
+.content{
+    flex:1;
+    display:flex;
+    margin:0;
+    background-image: url("https://demoda.vn/wp-content/uploads/2022/01/anh-vu-tru-doc-dao.jpg");
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+
+/* TRÁI */
+.main{
+    flex:2;
+    padding:30px;
+}
+
+/* PHẢI (THANH TOÁN) */
+.payment-box{
+    flex:1;
+    padding:8px;
+    background-image: url(https://demoda.vn/wp-content/uploads/2022/01/anh-vu-tru-doc-dao.jpg);
+    border-left:2px solid #ddd;
+    background-size: cover;
+    background-position: right;
+}
+
+/* FORM */
+input, button{
+    padding:10px;
+    margin:5px 0;
+    width:100%;
+}
+
+button{
+    background:#3498db;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+/* ===== SẢN PHẨM ===== */
+.dashboard{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:20px;
+    margin-top:20px;
+}
+
+.card{
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    cursor:pointer;
+    transition:0.3s;
+    text-align:center;
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+.card img{
+    width:100%;
+    height:140px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin:10px 0 5px;
+}
+
+.card p{
+    margin-bottom:10px;
+    color:#e74c3c;
+    font-weight:bold;
+}
+/* ===== DANH MỤC ===== */
+.category{
+    display:flex;
+    gap:10px;
+    margin-top:20px;
+    width:100%;
+    overflow:hidden; 
+}
+.category button{
+    flex:1; 
+    padding:10px 0;
+    border:none;
+    border-radius:20px;
+    background:#00ccff;
+    cursor:pointer;
+    font-size:14px;
+    text-align:center;
+    white-space:nowrap;
+    transition:0.3s;
+}
+h1,h2,p,label {
+    color:#ddd
+}
+/* TOP BAR */
+.top-bar{
+    display:flex;
+    justify-content:flex-end;
+    margin-bottom:10px;
+}
+
+/* ICON */
+.cart-icon{
+    cursor:pointer;
+    font-size:20px;
+    position:relative;
+}
+
+.cart-icon span{
+    background:red;
+    color:white;
+    border-radius:50%;
+    padding:2px 6px;
+    font-size:12px;
+    position:absolute;
+    top:-8px;
+    right:-10px;
+}
+
+/* GIỎ HÀNG */
+.cart{
+    position:fixed;
+    top:0;
+    right:-320px;
+    width:300px;
+    height:100%;
+    background:white;
+    box-shadow:-2px 0 10px rgba(0,0,0,0.2);
+    padding:15px;
+    transition:0.3s;
+    overflow-y:auto;
+    z-index:999;
+}
+
+.cart.show{
+    right:0;
+}
+
+/* ITEM */
+.cart-item{
+    display:flex;
+    gap:10px;
+    margin-bottom:10px;
+    border-bottom:1px solid #ddd;
+    padding-bottom:10px;
+}
+
+.cart-item img{
+    width:50px;
+}
+
+
+/*  Tablet  */
+@media (min-width:769px) and (max-width:1024px){
+
+  .menu-item{
+    padding:45px 60px;
+  }
+
+
+}
+
+/*  Desktop  */
+@media (min-width:1025px){
+
+  .menu{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
